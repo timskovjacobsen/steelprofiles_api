@@ -132,3 +132,7 @@ examples
 # Data storage
 *.csv
 *.sqlite3
+
+# Deta
+state
+prog_info

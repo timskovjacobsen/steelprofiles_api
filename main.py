@@ -1,10 +1,11 @@
 # Standard libray imports
-import pandas as pd
 import sqlite3
 from pathlib import Path
 
 # Third party imports
 from fastapi import FastAPI
+import pandas as pd
+
 
 app = FastAPI()
 
@@ -28,16 +29,17 @@ def _df_to_json(df):
 
 @app.get("/")
 async def root():
-    """Return a response of all steel profiles."""
+    """Return of all steel profiles present in the database."""
 
     query = """SELECT * FROM HEA"""
     df = _read_db(query)
     return _df_to_json(df)
 
 
-@app.get("/{profile}")
-async def anyprofile(string: str):
+@app.get("/{match_string}")
+async def anyprofile(match_string: str):
+    """Return all steel profiles whose name contain the given string."""
     query = """SELECT * FROM HEA"""
     df = _read_db(query)
-    df = df[df["name"].str.contains(string)]
+    df = df[df["name"].str.contains(match_string)]
     return _df_to_json(df)
