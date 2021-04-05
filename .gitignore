@@ -134,5 +134,6 @@ examples
 *.sqlite3
 
 # Deta
+.deta
 state
 prog_info
