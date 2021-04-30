@@ -1,4 +1,4 @@
-"""Script to scrape steel profile data from thw web"""
+"""Script to scrape steel profile data from the web"""
 
 # Standard library imports
 from pathlib import Path
@@ -22,7 +22,27 @@ if __name__ == "__main__":
         profile_name = df.loc[1][0].split(" ")[0]
 
         # Rename columns (NOTE: The SQLite database is case insensitive)
-        df = df.rename(columns={df.columns[0]: "name", "iy": "iiy", "iz": "iiz"})
+        df = df.rename(
+            columns={
+                df.columns[0]: "name",
+                "iy": "iiy",
+                "iz": "iiz",
+            }
+        )
+
+        # Split a potential merged column, like "tw = r1"
+        # There will only be 0 or 1
+        try:
+            column_to_split = [col for col in df if "=" in col][0]
+            first, second = column_to_split.split("=")
+
+            df[first.strip()] = df[column_to_split]
+            df[second.strip()] = df[column_to_split]
+            del df[column_to_split]
+
+        except IndexError:
+            # No merged columns
+            continue
 
         # Drop row with units
         df = df.drop(0, "index")

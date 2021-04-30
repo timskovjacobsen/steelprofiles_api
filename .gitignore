@@ -132,6 +132,7 @@ examples
 # Data storage
 *.csv
 *.sqlite3
+*.db
 
 # Deta
 .deta
