@@ -2,7 +2,7 @@
 
 API for requesting steel profile data.
 
-Currently only supports HEA profiles. More to come...
+Currently in development. It only supports HEA profiles for now. More to come...
 
 Endpoint: [https://nemd2m.deta.dev](https://nemd2m.deta.dev)
 
