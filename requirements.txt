@@ -1,2 +1,5 @@
 fastapi==0.63.0
+uvicorn==0.14.0
+aiofiles==0.7.0
 pandas==1.2.3
+jinja2==3.0.1

@@ -105,8 +105,9 @@ dist/
 # mypy
 .mypy_cache/
 
-# IDE settings
+# IDE settings and files
 .vscode/
+tempCodeRunnerFile.py
 
 # Excel files
 *.xlsx
