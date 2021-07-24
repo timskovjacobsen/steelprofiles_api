@@ -51,7 +51,18 @@ def _get_all_profiles_from_type(profile_type: str):
 
 @router.get("/api/{profile_type}")
 def profile_type(profile_type: str) -> Dict:
-    """Return of all steel profiles present of a certain type in the database."""
+    f"""Return of all steel profiles present of a certain type in the database.
+
+    Supported profile types are:\n{PROFILE_TYPES}
+
+    Example
+    -------
+    Visiting the endpoint
+
+        steelapi/timskovjacobsen.com/api/HEA
+
+    returns a JSON response with all HEA profiles and their data.
+    """
 
     try:
         df = _get_all_profiles_from_type(profile_type)
@@ -62,7 +73,16 @@ def profile_type(profile_type: str) -> Dict:
 
 @router.get("/api/{profile_type}/{dimension}")
 def anyprofile(profile_type: str, dimension: str) -> Dict:
-    """Return all steel profiles whose name contain the given string."""
+    """Return all the specific profile type with dimension.
+
+    Example
+    -------
+    Visiting the endpoint
+
+        steelapi/timskovjacobsen.com/api/HEA/120
+
+    returns a JSON response with the data for the HEA120 profile.
+    """
     try:
         df = _get_all_profiles_from_type(profile_type)
     except ValidationError as e:
