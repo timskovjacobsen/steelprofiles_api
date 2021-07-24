@@ -133,10 +133,11 @@ examples
 
 # Data storage
 *.csv
+!HEA.csv
+!HEB.csv
+!HEM.csv
+!IPE.csv
+!IPN.csv
+!UPN.csv
 *.sqlite3
 *.db
-
-# Deta
-.deta
-state
-prog_info
