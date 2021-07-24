@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Steel profile API made with FastAPI">
+    <meta name="author" content="Tim Skov Jacobsen">
+
+    <title>Steel Profiles API</title>
+    <link rel="shortcut icon" type="image/png" href="static/img/favicon.png" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link href="/static/css/theme.css" rel="stylesheet">
+    <link href="/static/css/docs.css" rel="stylesheet">
+    <link href="/static/css/styles.css" rel="stylesheet">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+    <script type="text/javascript"
+        src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+
+</head>
+
+<body>
+
+    <div class="starter-template">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-10">
+                    <div>
+
+                        {% block content %}
+                        <div class="content">
+                        </div>
+                        {% endblock %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
