@@ -2,8 +2,15 @@
 
 API for requesting steel profile data.
 
-Currently only supports HEA profiles. More to come...
+Currently supported profiles are:
 
-Endpoint: [https://nemd2m.deta.dev](https://nemd2m.deta.dev)
+* HEA
+* HEB
+* HEM
+* IPE
+* IPN
+* UPN
 
-[API Docs](https://nemd2m.deta.dev/docs)
+<!-- Endpoint: [https://nemd2m.deta.dev](https://nemd2m.deta.dev)
+
+[API Docs](https://nemd2m.deta.dev/docs) -->
