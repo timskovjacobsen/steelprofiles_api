@@ -1,0 +1,24 @@
+[Unit]
+Description=gunicorn uvicorn service for Weather Service API
+After=syslog.target
+
+[Service]
+ExecStart=/apps/.venv/bin/gunicorn -b 127.0.0.1:8000 -w 4 -k uvicorn.workers.UvicornWorker main:api --name steel_svc --chdir /apps/app_repo/ --access-logfile /apps/logs/steelprofiles-api/access.log --error-logfile /apps/logs/steelprofiles-api/errors.log --user apiuser
+
+# \/ \/ <- Added post recording for better restart perf.
+ExecReload=/bin/kill -s HUP $MAINPID
+KillMode=mixed
+TimeoutStopSec=5
+PrivateTmp=true
+# /\ /\ <- Added post recording for better restart perf.
+
+# Requires systemd version 211 or newer
+RuntimeDirectory=/apps/app_repo
+Restart=always
+Type=notify
+StandardError=syslog
+NotifyAccess=all
+
+
+[Install]
+WantedBy=multi-user.target
