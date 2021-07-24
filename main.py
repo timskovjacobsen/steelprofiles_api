@@ -32,7 +32,7 @@ def configure_routing():
 if __name__ == "__main__":
     # For running in development
     configure()
-    uvicorn.run("main:api", port=8000, host="127.0.0.1", reload=True)
+    uvicorn.run("main:api", port=4000, host="127.0.0.1", reload=True)
 
 else:
     # For running in production

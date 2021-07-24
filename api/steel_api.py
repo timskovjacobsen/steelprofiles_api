@@ -40,7 +40,8 @@ def _get_all_profiles_from_type(profile_type: str):
 
     if profile_type not in PROFILE_TYPES:
         raise ValidationError(
-            f"The profile type must be one of the supported types: {PROFILE_TYPES}.",
+            f"""The profile type must be one of the supported types: {PROFILE_TYPES}.
+            \n\nYou can request a specific profile, say HEA120, by visiting the endpoint '/api/HEA/120'""",
             status_code=404,
         )
 
@@ -48,7 +49,7 @@ def _get_all_profiles_from_type(profile_type: str):
     return _read_db(query)
 
 
-@router.get("/{profile_type}")
+@router.get("/api/{profile_type}")
 def profile_type(profile_type: str) -> Dict:
     """Return of all steel profiles present of a certain type in the database."""
 
@@ -59,12 +60,20 @@ def profile_type(profile_type: str) -> Dict:
         return fastapi.Response(content=e.error_msg, status_code=e.status_code)
 
 
-@router.get("/{profile_type}/{match_string}")
-def anyprofile(profile_type: str, match_string: str) -> Dict:
+@router.get("/api/{profile_type}/{dimension}")
+def anyprofile(profile_type: str, dimension: str) -> Dict:
     """Return all steel profiles whose name contain the given string."""
     try:
         df = _get_all_profiles_from_type(profile_type)
     except ValidationError as e:
         return fastapi.Response(content=e.error_msg, status_code=e.status_code)
-    df = df[df["name"].str.contains(match_string)]
+
+    df = df[df["name"].apply(lambda x: x[3:]) == dimension]
+
+    if df.empty:
+        return fastapi.Response(
+            content=f"The profile '{profile_type}{dimension}' does not exist.",
+            status_code=404,
+        )
+
     return _df_to_json(df)
