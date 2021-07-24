@@ -1,6 +1,6 @@
 # Steel profiles API
 
-API for requesting steel profile data.
+API for requesting profile data for standard European construction steel profiles.
 
 Currently supported profiles are:
 
@@ -11,12 +11,18 @@ Currently supported profiles are:
 * IPN
 * UPN
 
-API home page: [https://nemd2m.deta.dev](https://nemd2m.deta.dev)
+API home page: [steelapi.timskovjacobsen.com](http://steelapi.timskovjacobsen.com)
 
-Endpoints:
+## Endpoints
 
-* todo
+* `GET /api/{profile_type}`  
+  E.g. to get data for all **HEA** profiles, visit `steelapi.timskovjacobsen.com/api/hea`
 
-* todo
+* `GET /api/{profile_type}/{dimension}`  
+  E.g. to get data for the profile **HEA120**, visit `steelapi.timskovjacobsen.com/api/hea/120`
 
-[API Docs](https://nemd2m.deta.dev/docs) -->
+It's possible to use uppercase profile names in the URL, like HEA.
+
+## API Docs
+
+The swagger [API Docs](http://steelapi.timskovjacobsen/docs) for more info.
