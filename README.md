@@ -11,6 +11,12 @@ Currently supported profiles are:
 * IPN
 * UPN
 
-<!-- Endpoint: [https://nemd2m.deta.dev](https://nemd2m.deta.dev)
+API home page: [https://nemd2m.deta.dev](https://nemd2m.deta.dev)
+
+Endpoints:
+
+* todo
+
+* todo
 
 [API Docs](https://nemd2m.deta.dev/docs) -->
