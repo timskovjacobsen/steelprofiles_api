@@ -16,6 +16,11 @@ def index(request: Request):
     )
 
 
+@router.get("/api", include_in_schema=False)
+def api_index(request: Request):
+    return index(request)
+
+
 @router.get("/favicon.ico", include_in_schema=False)
 def favicon():
     return fastapi.responses.RedirectResponse(url="/static/img/favicon.ico")
