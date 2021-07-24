@@ -64,6 +64,7 @@ def profile_type(profile_type: str) -> Dict:
     returns a JSON response with all HEA profiles and their data.
     """
 
+    profile_type = profile_type.upper()
     try:
         df = _get_all_profiles_from_type(profile_type)
         return _df_to_json(df)
@@ -83,6 +84,7 @@ def anyprofile(profile_type: str, dimension: str) -> Dict:
 
     returns a JSON response with the data for the HEA120 profile.
     """
+    profile_type = profile_type.upper()
     try:
         df = _get_all_profiles_from_type(profile_type)
     except ValidationError as e:
