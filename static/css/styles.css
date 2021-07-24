@@ -1,0 +1,226 @@
+@import url(//fonts.googleapis.com/css?family=Fira+Sans:300,400,600,700);
+@import url(//fonts.googleapis.com/css?family=Crimson+Text:300,400,600,700);
+
+body {
+    font-family: "Fira Sans", sans-serif, Arial;
+    font-weight: 300;
+    color: black;
+    background: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Crimson Text", sans-serif, Arial;
+    font-weight: 300;
+}
+
+p {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-semi-bold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.starter-template {
+    margin-top: 25px;
+}
+
+.starter-template .content {
+    margin-left: 10px;
+}
+
+.starter-template .content h1 {
+    margin-top: 10px;
+    font-size: 60px;
+}
+
+.starter-template .content h1 .smaller {
+    font-size: 40px;
+}
+
+.starter-template .content .intro {
+    font-size: 25px;
+}
+
+.starter-template .links {
+    float: right;
+    right: 0;
+    margin-top: 125px;
+}
+
+.starter-template .links ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.starter-template .links ul li {
+    list-style: none;
+    display: inline;
+    margin: 0 10px;
+}
+
+.starter-template .links ul li:first-child {
+    margin-left: 0;
+}
+
+.starter-template .links ul li:last-child {
+    margin-right: 0;
+}
+
+.starter-template .links ul li.current-version {
+    font-weight: 400;
+}
+
+.starter-template .links ul li a, a {
+    text-decoration: underline;
+}
+
+.starter-template .links ul li a:hover, a:hover {
+    text-decoration: underline;
+}
+
+.starter-template .links ul li .icon-muted {
+    margin-right: 5px;
+}
+
+.starter-template .copyright {
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-transform: lowercase;
+    float: right;
+    right: 0;
+}
+
+@media (max-width: 1199px) {
+    .starter-template .content h1 {
+        font-size: 45px;
+    }
+
+    .starter-template .content h1 .smaller {
+        font-size: 30px;
+    }
+
+    .starter-template .content .lead {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .starter-template {
+        margin-top: 0;
+    }
+
+    .starter-template .logo {
+        margin: 40px auto;
+    }
+
+    .starter-template .content {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .starter-template .content h1 {
+        margin-bottom: 20px;
+    }
+
+    .starter-template .links {
+        float: none;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .starter-template .copyright {
+        float: none;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .starter-template .content h1 .smaller {
+        font-size: 25px;
+        display: block;
+    }
+
+    .starter-template .content .lead {
+        font-size: 16px;
+    }
+
+    .starter-template .links {
+        margin-top: 40px;
+    }
+
+    .starter-template .links ul li {
+        display: block;
+        margin: 0;
+    }
+
+    .starter-template .links ul li .icon-muted {
+        display: none;
+    }
+
+    .starter-template .copyright {
+        margin-top: 20px;
+    }
+}
+
+.profile-table {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.dataframe {
+    border-collapse: collapse;
+    /* margin: 25px 0; */
+    font-size: 11px;
+    font-family: sans-serif;
+    min-width: 300px;
+    /* box-shadow: 0 0 20px rgba(255, 237, 237, 0.15); */
+    border: 1px solid #dddddd;
+}
+
+.dataframe thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    border: 1px solid #009879;
+}
+
+.dataframe th,
+.dataframe td {
+    padding: 8px 3px 3px 8px;
+    border: none;
+}
+
+.dataframe tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.dataframe tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.dataframe tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.dataframe tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
