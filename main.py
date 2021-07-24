@@ -12,6 +12,7 @@ from starlette.staticfiles import StaticFiles
 # Project imports
 from views import home
 from api import steel_api
+from views import tables
 
 
 api = fastapi.FastAPI()
@@ -27,6 +28,7 @@ def configure_routing():
     api.mount("/static", StaticFiles(directory="static"), name="static")
     api.include_router(home.router)
     api.include_router(steel_api.router)
+    api.include_router(tables.router)
 
 
 if __name__ == "__main__":
