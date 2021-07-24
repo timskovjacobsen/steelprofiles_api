@@ -1,0 +1,74 @@
+{% extends "shared/layout.html" %}
+
+{% block content %}
+
+<img src="/static/img/favicon.png" style="float: left; max-width: 48px; margin-right: 20px;" alt="">
+
+<h1><span class="font-semi-bold">Steel Profiles REST API</span>
+</h1>
+
+<div style="clear:both;"></div>
+<br>
+<br>
+<p class="intro">
+    A simple REST API for requesting data for common European steel profiles.<br>
+    <br>
+    Check out the <a href="https://steelprofiles-api.com/docs/">Docs</a> for more information.<br>
+    <br>
+</p>
+
+<p>
+
+<h2>Endpoints</h2>
+<ul>
+    <li>
+        <strong><code>GET
+                /api/{profile_type}</code></strong><br>
+        E.g. to get data for all <strong>HEA</strong> profiles, visit <a href="/api/HEA" target="_blank"><strong>GET
+                /api/HEA</strong></a><br>
+        <br>
+    </li>
+
+    <li>
+        <strong><code>GET
+                        /api/{profile_type}/{dimension}</code></strong><br>
+        E.g. to get data for the profile <strong>HEA120</strong>, visit <a href="/api/HEA/120"
+            target="_blank"><strong>GET
+                /api/HEA/120</strong></a><br>
+        <br>
+    </li>
+</ul>
+</p>
+
+<h2>Units</h2>
+
+<p>The units used for this API are:</p>
+<div>
+    <ul>
+        <li>$\small{h: \text{mm}}$</li>
+        <li>$\small{b: \text{mm}}$</li>
+        <li>$\small{t_w: \text{mm}}$</li>
+        <li>$\small{t_f: \text{mm}}$</li>
+        <li>$\small{r: \text{mm}}$</li>
+        <li>$\small{d: \text{mm}}$</li>
+        <li>$\small{A: \text{cm²}}$</li>
+        <li>$\small{G: \text{kg/m}}$</li>
+        <li>$\small{I_y: \text{cm⁴}}$</li>
+        <li>$\small{W_y: \text{cm³}}$</li>
+        <li>$\small{ii_y: \text{cm}}$</li>
+        <li>$\small{I_z: \text{cm⁴}}$</li>
+        <li>$\small{W_z: \text{cm³}}$</li>
+        <li>$\small{ii_z: \text{cm}}$</li>
+    </ul>
+</div>
+
+<div style="margin-bottom:50px">
+    <h2>References</h2>
+
+    For creating this API, data from <a href="https://www.prontubeam.com/structural-steelwork-handbook" target="_blank">
+        prontubeam</a> were used.
+</div>
+
+</div>
+
+{% endblock %}

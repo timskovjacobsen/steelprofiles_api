@@ -1,0 +1,16 @@
+{% extends "shared/layout.html" %}
+
+{% block content %}
+
+<img src="/static/img/favicon.png" style="float: left; max-width: 48px; margin-right: 20px;" alt="">
+
+<h1><span class="font-semi-bold">{{ profile_type }}</span>
+</h1>
+
+<div class="profile-table">
+    {{ df_html | safe }}
+</div>
+
+</div>
+
+{% endblock %}
