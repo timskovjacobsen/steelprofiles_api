@@ -30,7 +30,7 @@ def _create_profile_table_endpoint(profile_type: str):
             {"request": request, "df_html": df_html, "profile_type": profile_type},
         )
 
-    @router.get(f"/{profile_type.lower()}")
+    @router.get(f"/{profile_type.lower()}", include_in_schema=False)
     def lowercase_profile_endpoint_template(request: Request):
         return uppercase_profile_endpoint_template(request)
 

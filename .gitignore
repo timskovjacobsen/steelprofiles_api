@@ -115,6 +115,7 @@ tempCodeRunnerFile.py
 
 # Image files
 *.png
+!favicon.png
 *.jpeg
 *.jpg
 
