@@ -1,7 +1,7 @@
 
 server {
     listen 80;
-    server_name steelapi.timskovjacobsen.com;
+    server_name steelapi.timskovjacobsen.com www.steelapi.timskovjacobsen.com;
     server_tokens off;
     charset utf-8;
 
