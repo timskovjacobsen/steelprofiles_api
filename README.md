@@ -59,4 +59,4 @@ The REST API is built with Python and the FastAPI framework. It uses Nginx in fr
 
 The API is deployed on a virtual machine running Ubuntu 20.04 hosted with Digital Ocean.
 
-Shout-out to the [Modern APIs with FastAPI and Python](https://training.talkpython.fm/courses/details/getting-started-with-fastapi) course for inspiring this project.
+Shout-out to the [Modern APIs with FastAPI and Python](https://training.talkpython.fm/courses/getting-started-with-fastapi?utm_source=fastapi) course for inspiring this project.
