@@ -51,7 +51,7 @@ It's possible to use uppercase profile names in the URL, like HEA.
 
 ## API Docs
 
-The swagger [API Docs](http://steelapi.timskovjacobsen/docs) for more info.
+See the swagger [API Docs](http://steelapi.timskovjacobsen/docs) for more info.
 
 ## Miscellaneous
 
