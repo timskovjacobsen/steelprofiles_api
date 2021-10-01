@@ -4,13 +4,30 @@
 
 <img src="/static/img/favicon.png" style="float: left; max-width: 48px; margin-right: 20px;" alt="">
 
-<h1><span class="font-semi-bold">{{ profile_type }}</span>
-</h1>
+<h1 class="font-semi-bold">{{ profile_type }}</h1>
 
-<div class="profile-table">
+<div class="profile-table table-responsive">
     {{ df_html | safe }}
 </div>
 
-</div>
-
+<script type="text/javascript">
+    window.onload = () => {
+        let rows = document.getElementById("profile-table").rows
+        for(let i=1; i<rows.length; ++i) {
+            for(let j=0; j<rows[i].cells.length; ++j) {
+                rows[i].cells[j].onclick = function() {
+                    navigator.clipboard.writeText(this.innerHTML)
+                }
+                rows[i].cells[j].style.cursor = "pointer";
+                rows[i].cells[j].setAttribute("data-bs-toggle", "tooltip")
+                rows[i].cells[j].setAttribute("data-bs-placement", "bottom")
+                rows[i].cells[j].setAttribute("title", "Click to Copy")
+            }
+        }
+        let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        let tooltipList = tooltipTriggerList.map(function (tooltipTrigger) {
+            return new bootstrap.Tooltip(tooltipTrigger)
+        })
+    }
+</script>
 {% endblock %}

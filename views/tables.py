@@ -23,7 +23,7 @@ def _create_profile_table_endpoint(profile_type: str):
     def uppercase_profile_endpoint_template(request: Request):
 
         df = pd.read_csv(f"./assets/{profile_type}.csv")
-        df_html = df.to_html()
+        df_html = df.to_html(classes="table table-hover fs-5", justify="start", table_id="profile-table")
 
         return templates.TemplateResponse(
             "home/profiletable.html",
