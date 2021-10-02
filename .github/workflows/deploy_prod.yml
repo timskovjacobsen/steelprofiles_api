@@ -18,7 +18,5 @@ jobs:
 
           script: |
             cd /apps/app_repo
-            source .venv/bin/activate
-            pip install -r requirements.txt
             git pull
-            python main.py
+            pip install -r requirements.txt
