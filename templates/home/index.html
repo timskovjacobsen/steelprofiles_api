@@ -4,7 +4,7 @@
 
 <div style="margin: auto; float: right;">
     <a href="https://github.com/timskovjacobsen/steelprofiles_api">
-        <img style="width: 42px; float: left;" src="/static/img/GitHub-icon.svg" alt="GitHub Icon" id="modeIcon2">
+        <img style="width: 42px; float: left;" src="/static/img/github-icon.svg" alt="GitHub Icon" id="modeIcon2">
     </a>
     <button class="toggleDarkMode" onclick="darkMode()">
         <img style="float: right; filter: invert(1);" src="/static/img/button-dark-mode.svg" alt="" id="modeIcon" />
@@ -105,16 +105,16 @@
         if ((imgToggle % 2) == 0) {
             document.getElementById("digitalOceanIMG").src = "/static/img/digitaldark.svg"
             document.getElementById("modeIcon").src = "/static/img/button-light-mode.svg"
-            document.getElementById("modeIcon").style.backgroundColor="#ffffff"
-            document.getElementById("modeIcon").style.filter="invert(0)"
+            document.getElementById("modeIcon").style.backgroundColor = "#ffffff"
+            document.getElementById("modeIcon").style.filter = "invert(0)"
             document.getElementById("modeIcon2").src = "/static/img/GitHub-icon-light.png"
         } else if ((imgToggle % 2) != 0) {
             document.getElementById("digitalOceanIMG").src =
                 "https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg"
             document.getElementById("modeIcon").src = "/static/img/button-dark-mode.svg"
-            document.getElementById("modeIcon").style.backgroundColor="#ffffff"
-            document.getElementById("modeIcon").style.filter="invert(1)"
-            document.getElementById("modeIcon2").src = "/static/img/GitHub-icon.svg"
+            document.getElementById("modeIcon").style.backgroundColor = "#ffffff"
+            document.getElementById("modeIcon").style.filter = "invert(1)"
+            document.getElementById("modeIcon2").src = "/static/img/github-icon.svg"
         }
 
     }
