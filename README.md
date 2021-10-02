@@ -51,7 +51,7 @@ It's possible to use uppercase profile names in the URL, like HEA.
 
 ## API Docs
 
-See the swagger [API Docs](http://steelapi.timskovjacobsen/docs) for more info.
+See the swagger [API Docs](https://steelapi.timskovjacobsen.com/docs) for more info.
 
 ## Miscellaneous
 
@@ -60,3 +60,7 @@ The REST API is built with Python and the FastAPI framework. It uses Nginx in fr
 The API is deployed on a virtual machine running Ubuntu 20.04 hosted with Digital Ocean.
 
 Shout-out to the [Modern APIs with FastAPI and Python](https://training.talkpython.fm/courses/getting-started-with-fastapi?utm_source=fastapi) course for inspiring this project.
+
+## Contributing
+
+If you want to contribute it's greatly appreciated. Take a look at [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
