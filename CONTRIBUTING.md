@@ -36,7 +36,10 @@ Please follow these simple guidelines if you want to contribute:
 
     All platforms:
 
-        python -m pip install -r requirements.txt
+        python -m pip install -r requirements/requirements.txt
+        python -m pip install -r requirements/requirements_dev.txt
+
+    > The requirements are separated into two files because the production app has the dependencies in `requirements.txt`, while local development requires `requirements_dev.txt` on top of that to run tests, linters etc.
 
 4. **Run the FastAPI app locally**
 
@@ -51,3 +54,8 @@ Please follow these simple guidelines if you want to contribute:
 6. **Open a Pull Request**
 
 > The app was developed with Python 3.8 and has been tested with 3.9 as well.
+
+## Other stuff
+
+If you add dependencies, please add them to the requirements files that is suitable.
+Pin versions in the format `fastapi==0.63.0` rather than just say `fastapi`, which will always take the latest version. It should always be a deliberate choice when updating dependencies in production.
