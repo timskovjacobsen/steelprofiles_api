@@ -5,6 +5,7 @@ from pathlib import Path
 # Third party imports
 import pytest
 from starlette.testclient import TestClient
+from requests import Response
 import pandas as pd
 
 # Project imports
@@ -24,7 +25,7 @@ def _profiles_dimensions(supported_profiles):
     profiles_dimensions = []
     con = sqlite3.connect(DATABASE_PATH)
     for profile_type in supported_profiles:
-        query = f"SELECT SUBSTR(name,1,3), SUBSTR(NAME,4,3) FROM {profile_type}"
+        query = f"SELECT SUBSTR(name,1,3), SUBSTR(NAME,4) FROM {profile_type}"
         profiles_dimension = pd.read_sql(query, con).values.tolist()
         profiles_dimensions += profiles_dimension
     return profiles_dimensions
