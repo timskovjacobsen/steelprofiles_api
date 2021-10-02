@@ -2,9 +2,19 @@
 
 {% block content %}
 
+<div style="margin: auto; float: right;">
+    <a href="https://github.com/timskovjacobsen/steelprofiles_api">
+        <img style="width: 42px; float: left;" src="/static/img/GitHub-icon.svg" alt="GitHub Icon" id="modeIcon2">
+    </a>
+    <button class="toggleDarkMode" onclick="darkMode()">
+        <img style="float: right; filter: invert(1);" src="/static/img/button-dark-mode.svg" alt="" id="modeIcon" />
+    </button>
+</div>
+
 <img src="/static/img/favicon.png" style="float: left; max-width: 48px; margin-right: 20px;" alt="">
 
 <h1 class="font-semi-bold">Steel Profiles REST API</h1>
+
 
 <div style="clear:both;"></div>
 <br>
@@ -26,7 +36,7 @@
 
     <li>
         <strong><code>GET
-                        /api/{profile_type}/{dimension}</code></strong><br>
+                /api/{profile_type}/{dimension}</code></strong><br>
         E.g. to get data for the profile <strong>HEA120</strong>, visit <a href="/api/HEA/120"
             target="_blank"><strong>GET
                 /api/HEA/120</strong></a><br>
@@ -78,11 +88,36 @@
         <a
             href="https://www.digitalocean.com/?refcode=0e16e3b2ed53&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
                 src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg"
-                alt="DigitalOcean Referral Badge" /></a>
+                alt="DigitalOcean Referral Badge" id="digitalOceanIMG" /></a>
     </div>
 
 </div>
 
 </div>
+
+<script>
+    let x = 0;
+
+    function darkMode() {
+        var toggleDarkMode = document.body;
+        toggleDarkMode.classList.toggle("dark-mode");
+        imgToggle = x++;
+        if ((imgToggle % 2) == 0) {
+            document.getElementById("digitalOceanIMG").src = "/static/img/digitaldark.svg"
+            document.getElementById("modeIcon").src = "/static/img/button-light-mode.svg"
+            document.getElementById("modeIcon").style.backgroundColor="#ffffff"
+            document.getElementById("modeIcon").style.filter="invert(0)"
+            document.getElementById("modeIcon2").src = "/static/img/GitHub-icon-light.png"
+        } else if ((imgToggle % 2) != 0) {
+            document.getElementById("digitalOceanIMG").src =
+                "https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg"
+            document.getElementById("modeIcon").src = "/static/img/button-dark-mode.svg"
+            document.getElementById("modeIcon").style.backgroundColor="#ffffff"
+            document.getElementById("modeIcon").style.filter="invert(1)"
+            document.getElementById("modeIcon2").src = "/static/img/GitHub-icon.svg"
+        }
+
+    }
+</script>
 
 {% endblock %}
