@@ -31,10 +31,10 @@ body {
 
 .toggleDarkMode {
     width: 50px; 
+    height: 47px; 
     border: 0px; 
     padding: 0px;
-    margin-left: 24px;
-    border-radius: 24px;
+    border-radius: 50%;
     background-color: #000000;
 }
 
@@ -44,8 +44,8 @@ body {
 
 #modeIcon {
     border: 0px;
-    border-radius: 24px;
-    padding: 2px;
+    border-radius: 50%;
+    padding: 1px 2px;
     width: 50px;
 
 }
@@ -74,6 +74,44 @@ p {
 .font-bold {
     font-weight: 700;
 }
+
+.site-header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-icon {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 16px 8px 8px 8px;
+}
+
+.site-title {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: auto;
+    padding-right: 60px;
+}
+
+.site-social-icons {
+    flex-shrink: 1;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+    padding: 10px 6px;
+    width: fit-content;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.social-icon {
+    min-width: 50px;
+    margin: 4px;
+}
+
 
 .starter-template {
     margin-top: 25px;
@@ -176,6 +214,7 @@ p {
 
     .starter-template .content h1 {
         margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     .starter-template .links {
@@ -188,9 +227,33 @@ p {
         float: none;
         text-align: center;
     }
+
+    .no-label-list {
+        list-style-type: none;
+        padding-left: 0px;
+    }
 }
 
 @media (max-width: 767px) {
+
+    .site-header {
+        flex-wrap: wrap;
+    }
+
+    .site-icon {
+        margin-top: 10px;
+        margin-bottom: -10px;
+    }
+
+    .site-title {
+        width: 100%;
+        padding: 0px 45px;
+    }
+
+    .site-social-icons {
+        width: 80px;
+    }
+
     .starter-template .content h1 .smaller {
         font-size: 25px;
         display: block;
@@ -261,4 +324,29 @@ p {
 .dataframe tbody tr.active-row {
     font-weight: bold;
     color: #009879;
+}
+
+@media (max-width: 399px) {
+    body {
+        min-width: 100vw;
+        padding: 0px;
+    }
+
+    #modeIcon2 {
+        display: none;
+    }
+
+    .container {
+        width: 100vw;
+        min-width: 300px;
+        padding: 20px;
+    }
+
+    .content {
+        box-sizing: content-box;
+    }
+
+    .site-title {
+        padding: 0px;
+    }
 }
