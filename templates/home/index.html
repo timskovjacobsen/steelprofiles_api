@@ -2,21 +2,28 @@
 
 {% block content %}
 
-<div style="margin: auto; float: right;">
-    <a href="https://github.com/timskovjacobsen/steelprofiles_api">
-        <img style="width: 42px; float: left;" src="/static/img/github-icon.svg" alt="GitHub Icon" id="modeIcon2">
-    </a>
-    <button class="toggleDarkMode" onclick="darkMode()">
-        <img style="float: right; filter: invert(1);" src="/static/img/button-dark-mode.svg" alt="" id="modeIcon" />
-    </button>
+<div class="site-social-icons">
+    <div class="social-icon">
+        <a href="https://github.com/timskovjacobsen/steelprofiles_api">
+            <img style="width: 47px;" src="/static/img/github-icon.svg" alt="GitHub Icon" id="modeIcon2">
+        </a>
+    </div>
+    <div class="social-icon">
+        <button class="toggleDarkMode" onclick="darkMode()">
+            <img style="filter: invert(1);" src="/static/img/button-dark-mode.svg" alt="" id="modeIcon" />
+        </button>
+    </div>
+</div> 
+
+<div class="site-header">
+    <div class="site-icon">
+        <img src="/static/img/favicon.png" style="max-width: 48px;" alt="">
+    </div>
+ 
+    <div class="site-title">
+        <h1 class="font-semi-bold">Steel&nbsp;Profiles REST&nbsp;API</h1>
+    </div>
 </div>
-
-<img src="/static/img/favicon.png" style="float: left; max-width: 48px; margin-right: 20px;" alt="">
-
-<h1 class="font-semi-bold">Steel Profiles REST API</h1>
-
-
-<div style="clear:both;"></div>
 <br>
 <p class="intro">
     A simple REST API for requesting data for common European steel profiles.<br>
@@ -26,7 +33,7 @@
 </p>
 
 <h2>Endpoints</h2>
-<ul>
+<ul class="no-label-list">
     <li>
         <strong><code>GET
                 /api/{profile_type}</code></strong><br>
@@ -47,7 +54,7 @@
 
 <p>The metric units used for the steel dimensions in this API are:</p>
 <div>
-    <ul>
+    <ul class="no-label-list">
         <li><code>h: mm</code></li>
         <li><code>b: mm</code></li>
         <li><code>tw: mm</code></li>
